@@ -1,0 +1,56 @@
+.resProf {
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(61, 60, 60);
+  box-shadow: 4px 3px 8px 1px #b6b4b4;
+  -webkit-box-shadow: 4px 3px 8px 1px #a19898;
+  flex-wrap: wrap;
+}
+.resP1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+}
+.resdiv {
+  margin: 1rem auto;
+  margin-left: 3rem;
+}
+
+.resim {
+  margin-left: 2rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  max-width: 30rem;
+  max-height: 10rem;
+  box-shadow: 4px 3px 8px 1px #b6b4b4;
+  -webkit-box-shadow: 4px 3px 8px 1px #a19898;
+}
+
+.resTitle {
+  margin: 1rem auto;
+  font-family: Blacksword;
+  color: orange;
+  font-size: 80px;
+}
+
+.resAd {
+  margin: 1rem auto;
+  color: white;
+}
+
+.foodser {
+  margin: 9rem auto;
+  margin-right: 2rem;
+}
+
+.hombutton {
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+ 

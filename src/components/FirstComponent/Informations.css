@@ -1,0 +1,39 @@
+.cont {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  overflow: hidden;
+  height: 25rem;
+  color: rgb(223, 219, 219);
+  align-items: center;
+}
+
+.one {
+  margin-left: 8rem;
+  width: 50%;
+  text-align: left;
+  align-items: flex-start;
+  margin-right: 2rem;
+}
+
+.two {
+  width: 50%;
+  text-align: left;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+.onecont {
+  display: flex;
+  flex-direction: row;
+}
+
+.onecont1 {
+  width: 50%;
+  margin-right: 2rem;
+}
+.onecont2 {
+  width: 50%;
+  margin-left: 2rem;
+}

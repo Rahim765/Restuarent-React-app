@@ -1,0 +1,44 @@
+.resfoods {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 18rem;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  color: white;
+  border-radius: 25px 0px;
+  box-shadow: 20px 10px 40px 10px #bebcbc;
+  -webkit-box-shadow: 20px 10px 30px 10px #bcb7b7;
+  background-color: rgb(103, 100, 100);
+}
+
+.firstly {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.resfoodsimg {
+  margin-left: 2rem;
+  margin: 1rem auto;
+  border-radius: 50%;
+  max-width: 30rem;
+  max-height: 10rem;
+  box-shadow: 4px 3px 8px 1px #b6b4b4;
+  -webkit-box-shadow: 4px 3px 8px 1px #a19898;
+}
+
+.resfoodsdescription {
+  font-style: italic;
+  margin-left: 1rem;
+}
+.resfoodsprice {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: #ad5502;
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+

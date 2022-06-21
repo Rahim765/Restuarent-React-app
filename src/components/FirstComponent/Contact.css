@@ -1,0 +1,39 @@
+.main {
+  margin: 5rem auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.first {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.second {
+  width: 50%;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+.msg {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: 2px solid gray;
+  height: 10rem;
+  width: 35rem;
+  font-size: x-large;
+}
+.msg:hover {
+  border: 3px solid gold;
+}
+
+.font {
+  font-family: Blacksword;
+  color: orange;
+}

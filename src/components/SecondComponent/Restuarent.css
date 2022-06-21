@@ -1,0 +1,38 @@
+.restuarent {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  margin: 2rem auto;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 4px 3px 8px 1px #969696;
+  box-shadow: 4px 3px 8px 1px #969696;
+  -webkit-box-shadow: 4px 3px 8px 1px #969696;
+  cursor: pointer;
+}
+
+.restuarent:hover {
+  border: 2px solid orange;
+  box-shadow: 4px 4px 8px 6px #969696;
+  -webkit-box-shadow: 6px 6px 8px 6px #969696;
+}
+
+.resPh {
+  max-width: 40rem;
+  max-height: 15rem;
+  border-radius: 30px;
+}
+
+.resName {
+  margin: 1rem auto;
+  align-items: center;
+  text-align: center;
+}
+.resAdd {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: xx-small;
+}
+#h5 {
+  font-size: 2px;
+}

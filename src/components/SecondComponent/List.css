@@ -1,0 +1,8 @@
+.res {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: center;
+}

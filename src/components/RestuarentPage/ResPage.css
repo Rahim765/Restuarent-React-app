@@ -1,0 +1,93 @@
+.foodcontain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.containerupload {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 1rem auto;
+  margin-left: 2rem;
+}
+.phupload {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 8px;
+  font-size: 17px;
+  color: #b8b8b8;
+  margin-top: 1rem;
+}
+.button-wrap {
+  position: relative;
+}
+.bupload {
+  display: inline-block;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(61, 60, 60);
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.newfood {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5rem;
+  justify-content: flex-end;
+}
+
+#foodpro {
+  text-align: start;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: 2px solid gray;
+  height: 3rem;
+  width: 18rem;
+  font-size: x-large;
+  margin-left: 4rem;
+}
+
+#foodpro:hover {
+  border: 3px solid gold;
+}
+#foodproprice {
+  text-align: start;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: 2px solid gray;
+  height: 3rem;
+  width: 6rem;
+  font-size: x-large;
+  margin-left: 4rem;
+  margin-right: 1rem;
+}
+
+#foodproprice:hover {
+  border: 3px solid gold;
+}
+
+.sortinputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.dfodcon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 18rem;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+}

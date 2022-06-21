@@ -1,0 +1,15 @@
+.txt {
+  text-align: start;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: 2px solid gray;
+  height: 3rem;
+  width: 35rem;
+  font-size: x-large;
+}
+
+.txt:hover {
+  border: 3px solid gold;
+}

@@ -1,0 +1,66 @@
+.head {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(61, 60, 60);
+
+  color: #fffdfd;
+}
+
+.f {
+  margin: 3rem auto;
+  margin-left: 4rem;
+}
+
+.s {
+  margin: 3rem auto;
+  margin-right: 4rem;
+}
+
+.ser {
+  width: 21rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 2px solid #fffefe;
+  cursor: pointer;
+}
+.ser:hover {
+  border: 2px solid orange;
+}
+.man {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.manlog {
+  margin-top: 0.2rem;
+}
+.man:hover {
+  color: orange;
+}
+
+.ordlog {
+  cursor: pointer;
+}
+.ordlog:hover {
+  color: orange;
+}
+
+#Calicon {
+  background-image: url("../../Logo/search.svg");
+  background-repeat: no-repeat;
+  background-position: 19rem 0.5rem;
+}
+
+.line {
+  border: 0.1px solid rgb(98, 97, 97);
+  box-shadow: 2px 1px 4px 1px #494747;
+  -webkit-box-shadow: 2px 1px 3px 1px #413f3f;
+}
+
+.usinfo {
+  color: orange;
+  border-bottom: 2px solid orange;
+  text-align: center;
+  margin-top: 1rem ;
+}

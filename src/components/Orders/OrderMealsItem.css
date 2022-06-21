@@ -1,0 +1,17 @@
+.orderMealsItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(202, 201, 198);
+  border-radius: 25px;
+}
+
+.ordItem {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
