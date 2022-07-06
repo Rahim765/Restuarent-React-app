@@ -12,3 +12,15 @@
   font-size: 40px;
   font-family: Blacksword;
 }
+
+.maindiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.maindivmember {
+  margin-left: 2rem;
+}
+.foodsec {
+  font-size: larger;
+}

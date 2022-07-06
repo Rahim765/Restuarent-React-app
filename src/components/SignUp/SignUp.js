@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useEffect, useContext, useRef } from "react";
 import "./SignUp.css";
 
 import Button from "../UI/Button";
@@ -8,27 +8,60 @@ import AuthContext from "../../Context/auth-context";
 const SignUp = (props) => {
   const ctx = useContext(AuthContext);
 
+  var validUsers;
+  useEffect(() => {
+    loadUsers();
+  });
+  async function loadUsers() {
+    try {
+      const response = await fetch("http://localhost:4000/users");
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
+
+      const data = await response.json();
+
+      validUsers = data.result;
+      //console.log(data.result["name"]);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   const userName = useRef();
   const phoneNumber = useRef();
   const passWord = useRef();
   const repeatedPassword = useRef();
   const city = useRef();
 
-  function signup() {
+  async function signup() {
+    console.log(validUsers);
+
+    var repeat = false;
+
     const uname = userName.current.value;
     const pnumber = phoneNumber.current.value;
     const ps = passWord.current.value;
     const rps = repeatedPassword.current.value;
     const cit = city.current.value;
     console.log(ps === rps);
-    console.log(uname.length > 5);
+    console.log(uname.length > 2);
     console.log(uname.length);
     console.log(pnumber.length);
     console.log(cit);
 
+    if (validUsers != null) {
+      validUsers.map((user) => {
+        if (user.name === uname) {
+          repeat = true;
+          alert("The User Name Has Already Taken!");
+        }
+      });
+    }
     if (
+      !repeat &&
       ps === rps &&
-      uname.length > 5 &&
+      uname.length > 2 &&
       pnumber.length === 11 &&
       cit.length > 0
     ) {
@@ -38,9 +71,21 @@ const SignUp = (props) => {
         password: ps,
         city: cit,
       };
-      console.log(user);
+      const respone = await fetch("http://localhost:4000/users", {
+        method: "POST",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = respone.json;
+
+      console.log(data);
+      backHome();
     } else {
-      window.prompt("Wrong Data");
+      if (!repeat) {
+        alert("Wrong Data");
+      }
     }
   }
 

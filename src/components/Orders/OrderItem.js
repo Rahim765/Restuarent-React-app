@@ -22,16 +22,18 @@ const OrderItem = (props) => {
   }
   return (
     <React.Fragment>
-      <div
-        className="orderItem wow animate__flipInY"
-        onClick={showCartHandler}
-      >
+      <div className="orderItem wow animate__flipInY" onClick={showCartHandler}>
         <div className="itemName">{props.name}</div>
-        <div className="itemAmount"> Amount : ${props.totalAmount}</div>
+        <div className="itemAmount"> Amount : {props.totalAmount}</div>
         <div className="itemAmount">Date : {props.date}</div>
       </div>
       {isShowCart && (
-        <OrderMeals onClose={hideCartHandler} resName={props.name}></OrderMeals>
+        <OrderMeals
+          id={props.id}
+          orderList={props.orderList}
+          onClose={hideCartHandler}
+          resName={props.name}
+        ></OrderMeals>
       )}
     </React.Fragment>
   );

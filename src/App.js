@@ -86,6 +86,7 @@ function App() {
         {!isLoggedIn &&
           !isSignUp &&
           !isRestuarent &&
+          !isOrder &&
           isRestuarentLogin &&
           isRestuarentPage && <ResPage></ResPage>}
 

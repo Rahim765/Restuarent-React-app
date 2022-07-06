@@ -6,9 +6,12 @@ import Navbar from "./Navbar";
 import Slider from "./Slider";
 import "./FirstPage.css";
 const FirstPage = (props) => {
+  if (localStorage.getItem("intores") != null) {
+    localStorage.removeItem("intores");
+  }
   return (
     <div>
-      <Navbar ></Navbar>
+      <Navbar></Navbar>
       <Slider></Slider>
       <Footer></Footer>
       <br></br>

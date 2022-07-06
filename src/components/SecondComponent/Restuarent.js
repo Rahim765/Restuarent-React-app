@@ -16,6 +16,7 @@ const Restuarent = (props) => {
   const fullname = props.name;
   const addr = props.address;
   function onRestuarentInfo() {
+    localStorage.setItem("CurrentRestuarant", fullname);
     ctx.setRestuarentInfo(im, fullname, addr);
   }
   return (

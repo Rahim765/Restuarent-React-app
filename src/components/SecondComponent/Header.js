@@ -27,6 +27,7 @@ const Header = (props) => {
   const ctx = useContext(AuthContext);
   function logOutHandler() {
     localStorage.removeItem("LoggedIn");
+    localStorage.removeItem("userphonenumber");
     localStorage.removeItem("username");
     ctx.setIsLoggedIn(false);
     ctx.setIsRestuarent(false);
@@ -51,8 +52,9 @@ const Header = (props) => {
             <Collapse in={isChecked}>
               <Paper elevation={5} style={{ margin: 5 }}>
                 <h3 className="usinfo">{localStorage.getItem("username")}</h3>
-                <h3 className="usinfo">PhoneNumber</h3>
-                <h3 className="usinfo">City</h3>
+                <h3 className="usinfo">
+                  {localStorage.getItem("userphonenumber")}
+                </h3>
               </Paper>
             </Collapse>
           </div>

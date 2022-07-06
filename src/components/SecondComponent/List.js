@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./List.css";
 import Restuarent from "./Restuarent";
 
@@ -105,17 +105,44 @@ const list = [
   },
 ];
 
+var validRestuarants = [];
+
 const List = (props) => {
+  const [update, setUpdate] = useState(false);
+  useEffect(() => {
+    loadRestuarant();
+  }, []);
+
+  async function loadRestuarant() {
+    try {
+      const response = await fetch("http://localhost:4000/restuarant");
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
+
+      const data = await response.json();
+
+      validRestuarants = data.result;
+      console.log(validRestuarants[0].path);
+      console.log(validRestuarants);
+      console.log(`restuarent/${validRestuarants[0].resName}`);
+      setUpdate(!update);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  console.log(validRestuarants);
   return (
     <div className="res">
-      {list.map(
+      {validRestuarants.map(
         (res) =>
-          (res.name.includes(props.search) ||
-            res.address.includes(props.search)) && (
+          (res.resName.includes(props.search) ||
+            res.resAddress.includes(props.search)) && (
             <Restuarent
-              photo={res.path}
-              name={res.name}
-              address={res.address}
+              photo={`restuarent/${res.resName}.jpg`}
+              name={res.resName}
+              address={res.resAddress}
             ></Restuarent>
           )
       )}

@@ -59,8 +59,8 @@
 }
 
 .usinfo {
-  color: orange;
-  border-bottom: 2px solid orange;
+  color: rgb(61, 60, 60);
+  border-bottom: 2px solid rgb(61, 60, 60);
   text-align: center;
-  margin-top: 1rem ;
+  margin-top: 1rem;
 }

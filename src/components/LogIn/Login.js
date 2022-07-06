@@ -5,11 +5,32 @@ import "./Login.css";
 import WOW from "wowjs";
 import "animate.css";
 const Login = (props) => {
+  var validUsers;
+  async function loadUsers() {
+    try {
+      const response = await fetch("http://localhost:4000/users");
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
+
+      const data = await response.json();
+
+      validUsers = data.result;
+      //console.log(data.result["name"]);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   const username = useRef();
+  const pass = useRef();
+
   useEffect(() => {
     new WOW.WOW({
       live: false,
     }).init();
+
+    loadUsers();
   }, []);
 
   const ctx = useContext(AuthContext);
@@ -17,9 +38,21 @@ const Login = (props) => {
     ctx.setIsLoggedIn(false);
   }
   function toRestuarent() {
-    localStorage.setItem("username", username.current.value);
-    localStorage.setItem("LoggedIn", "1");
-    ctx.setIsRestuarent(true);
+    const uname = username.current.value;
+    const ps = pass.current.value;
+    var flag = false;
+    validUsers.map((user) => {
+      if (user.name === uname && user.password === ps) {
+        localStorage.setItem("username", username.current.value);
+        localStorage.setItem("userphonenumber", user.phoneNumber);
+        localStorage.setItem("LoggedIn", "1");
+        ctx.setIsRestuarent(true);
+        flag = true;
+      }
+    });
+    if (!flag) {
+      alert("Wrong Username or Password!");
+    }
   }
   return (
     <div>
@@ -50,6 +83,7 @@ const Login = (props) => {
             />
             <br></br>
             <input
+              ref={pass}
               className="wow animate__fadeInRightBig"
               id="input"
               type="password"

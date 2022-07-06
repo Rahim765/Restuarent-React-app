@@ -71,6 +71,7 @@
   box-shadow: 20px 10px 40px 10px #bebcbc;
   -webkit-box-shadow: 20px 10px 30px 10px #bcb7b7;
   margin-left: 1rem;
+  margin-right: 2rem;
 }
 
 .commentinput:focus-within {
